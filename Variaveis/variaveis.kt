@@ -45,16 +45,46 @@
 
 //Multabilidade e Imutabilidade no contexto de var e val
 
-fun main() {
+// fun main() {
 
-    var mutavel: Int = 10 //mutavel
-    val imutavel: Int = 5 //imutavel
+//     var mutavel: Int = 10 //mutável
+//     val imutavel: Int = 5 //imutavel
     
 
-    // mutavel = 15 //0k
-    // imutavel = 20 //Erro ! Não pode ser atribuida um valor a uma 
-    // //variável declarada como imutável
+//     // mutavel = 15 //0k
+//     // imutavel = 20 //Erro ! Não pode ser atribuida um valor a uma 
+//     // //variável declarada como imutável
     
-    println("Mutável: $mutavel")
-    println("Imutável: $imutavel")
-}
+//     println("Mutável: $mutavel")
+//     println("Imutável: $imutavel")
+// }
+
+//Convenções de Nomenclatura
+
+//Exemplo de nomeclatura de variáveis
+    // fun main() {
+
+    //     val nomeCompleto: String = "Rodrigo Filho"
+    //     val idadeDoUsuario: Int = 19
+    //     val valor_Total: Double = 50.0 //Evite Utilizar underscore em nome de variáveis
+    //     val inicialNome: Char = 'R'
+    //     println("Nome completo: $nomeCompleto")
+    //     println("idadeDoUsuario: $idadeDoUsuario")
+    //     println("valor_Total: $valor_Total") //evite dar nome de variável assim
+    //     println("inicialNome: $inicialNome")
+    // }
+
+    //Escopo de Variáveis
+
+    //Exemplo
+
+    fun main () {
+        val nome = "Alice"
+
+        if(true) {
+            val sobrenome = "Silva" //variável sobrenome só é visivel dentro do bloco
+            println("$nome $sobrenome") //Alice Silva
+        } else 
+        println("$nome $sobrenome") //ERRO! A variável sobrenome não está
+        // definida no escopo e não é visivel
+    }
